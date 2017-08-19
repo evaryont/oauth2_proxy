@@ -29,6 +29,7 @@ var (
 )
 
 func (u *UpstreamProxy) handleWebsocket(w http.ResponseWriter, r *http.Request) {
+	log.Printf("upgrading path %q to websockets", r..URL.Path)
 
 	// Copy request headers and remove websocket handshaking headers
 	// before submitting to the upstream server
